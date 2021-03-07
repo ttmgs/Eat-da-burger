@@ -1,3 +1,30 @@
-<h1>EAT THE BURGER</h1>
 
-<button data-id="{{id}}" class="devourBtn" type="submit"></button>
+<h1>EAT-DA-BURGER</h1>
+
+<div class="lists">
+        <p class="listTitle">WAITING</p>
+    <ol>
+        {{#each waitingList}}
+        <li data-id="{{id}}">
+            {{name}}
+            <button data-id="{{id}}" class="devourBtn">Devour!</button>
+        </li>
+        {{/each}}
+    </ol>
+</div>
+
+<div class="lists">
+        <p class="listTitle">DEVOURED</p>
+    <ol>
+        {{#each devouredList}}
+        <li data-id="{{id}}">{{name}}</li>
+        {{/each}}
+    </ol>
+</div>
+
+<div>
+    <form id="submit">
+        <input type="text" id="name" placeholder="Burger name">
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+</div>
