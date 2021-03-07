@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 // MAKE CALLS USING MODEL FUNCTIONS
-var model = require("../models/model.js");
+var model = require("../models/models.js");
 
 router.get("/", function(req, res){
     var waitingList;
